@@ -1,0 +1,34 @@
+////////
+////
+//// Typography
+////
+///////
+
+// Text-Large
+.text-current {
+  font-family: 'MarrSansRegular';
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: var(--color-secondary);
+}
+
+.text-medium {
+  font-family: 'MarrSansMedium';
+  font-size: 1.8rem;
+  line-height: 3.4rem;
+  color: var(--color-secondary);
+}
+
+.text-small {
+  font-family: 'MarrSansRegular';
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  color: var(--color-secondary);
+}
+
+.text-caption {
+  font-family: 'MarrSansRegular';
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #858585;
+}
