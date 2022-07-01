@@ -8,15 +8,6 @@ body {
   color: var(--color-secondary);
 }
 
-.main {
-  max-width: 144rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-}
-
 .footer {
   margin-bottom: 3.2rem;
 }
@@ -31,23 +22,6 @@ body {
 
 .front {
   z-index: 99;
-}
-
-a.link {
-  pointer-events: auto;
-  z-index: 99;
-  display: inline;
-  transition: all 200ms ease-in-out;
-}
-a:hover.link {
-  z-index: 99;
-  pointer-events: auto;
-  color: var(--color-tertiary);
-}
-
-.link-behance {
-  z-index: 99;
-  margin-left: 1.6rem;
 }
 
 @media only screen and (max-width: 767px) {
