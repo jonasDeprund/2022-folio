@@ -28,8 +28,23 @@ function Container() {
       <div className="container-images">
         <div className="row">
           <img
-            className="image-gif cell-start-1 cell-end-4"
+            className="image-gif cell-start-6 cell-end-10"
             src={imageNexity}
+            alt=""
+          />
+          <img
+            className="image-gif cell-start-1 cell-end-5"
+            src={imageBonduelle}
+            alt=""
+          />
+          <img
+            className="image-gif cell-start-4 cell-end-8"
+            src={imageDanone}
+            alt=""
+          />
+          <img
+            className="image-gif cell-start-8 cell-end-12"
+            src={imageElo}
             alt=""
           />
         </div>

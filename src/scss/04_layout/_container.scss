@@ -26,6 +26,27 @@ span.button:first-child {
   margin-left: 50px;
 }
 
+.wrapper-main {
+}
+
+.container-title {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .image-gif {
-  display: inline-block;
+  display: block;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
