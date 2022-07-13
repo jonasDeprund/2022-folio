@@ -12,7 +12,7 @@
   border: 1px solid var(--color-secondary);
   border-radius: 999px;
   padding: 0 16px;
-  margin: 0 4px;
+  margin: 0 6px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -20,10 +20,6 @@
 .button:hover {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-}
-
-span.button:first-child {
-  margin-left: 50px;
 }
 
 .wrapper-main {
@@ -52,6 +48,7 @@ span.button:first-child {
 
 .image-2 {
   top: 50%;
+  left: -100px;
 }
 
 .image-3 {
@@ -63,8 +60,22 @@ span.button:first-child {
 }
 
 .image-gif {
+  animation-duration: 1s;
+  animation-name: fadein;
   display: block;
   z-index: -1;
   width: 100%;
   height: 100%;
+}
+
+@keyframes fadein {
+  from {
+    scale: 0.9;
+    opacity: 0;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }
