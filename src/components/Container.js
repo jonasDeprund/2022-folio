@@ -16,7 +16,7 @@ function Container() {
       {/* text */}
       <div className="container-title">
         <div class="row">
-          <h1 class="text-h1 cell-start-0 cell-end-12 cell-start-0-m cell-end-12-m">
+          <h1 class="text-h1 text-h1-m cell-start-0 cell-end-12 cell-start-0-m cell-end-12-m">
             Hello. I am an interactive designer based in Paris.
             <br />I worked for
             <a
@@ -26,7 +26,7 @@ function Container() {
               <span
                 onMouseEnter={() => setIsShown1(true)}
                 onMouseLeave={() => setIsShown1(false)}
-                class="text-h1 button"
+                class="text-h1 text-h1-m button"
               >
                 Nexity
               </span>
@@ -38,7 +38,7 @@ function Container() {
               <span
                 onMouseEnter={() => setIsShown2(true)}
                 onMouseLeave={() => setIsShown2(false)}
-                class="text-h1 button"
+                class="text-h1 text-h1-m button"
               >
                 Bonduelle
               </span>
@@ -50,7 +50,7 @@ function Container() {
               <span
                 onMouseEnter={() => setIsShown3(true)}
                 onMouseLeave={() => setIsShown3(false)}
-                class="text-h1 button"
+                class="text-h1 text-h1-m button"
               >
                 Danone
               </span>
@@ -62,17 +62,16 @@ function Container() {
               <span
                 onMouseEnter={() => setIsShown4(true)}
                 onMouseLeave={() => setIsShown4(false)}
-                class="text-h1 button"
+                class="text-h1 text-h1-m button"
               >
                 Elo Group
               </span>
             </a>
             <a href="https://www.behance.net/jonasdeprund" target="_blank">
-              <span class="text-h1 button">+</span>
+              <span class="text-h1 text-h1-m button">+</span>
             </a>
             <br />
-            <br />
-            Feel free to contact me
+            <p className="contact">Feel free to contact me</p>
           </h1>
         </div>
       </div>
