@@ -27,12 +27,9 @@ span.button:first-child {
 }
 
 .wrapper-main {
-}
-
-.container-title {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
+  display: flex;
+  position: relative;
+  height: 100vh;
   align-items: center;
 }
 
@@ -42,6 +39,27 @@ span.button:first-child {
   height: 100%;
   top: 0;
   left: 0;
+  pointer-events: none;
+}
+
+.bloc-image {
+  position: absolute;
+}
+
+.image-1 {
+  bottom: 0;
+}
+
+.image-2 {
+  top: 50%;
+}
+
+.image-3 {
+  top: 10%;
+}
+
+.image-4 {
+  top: 0;
 }
 
 .image-gif {

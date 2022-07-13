@@ -26,27 +26,41 @@ function Container() {
       </div>
       {/* images */}
       <div className="container-images">
-        <div className="row">
-          <img
-            className="image-gif cell-start-6 cell-end-10"
-            src={imageNexity}
-            alt=""
-          />
-          <img
-            className="image-gif cell-start-1 cell-end-5"
-            src={imageBonduelle}
-            alt=""
-          />
-          <img
-            className="image-gif cell-start-4 cell-end-8"
-            src={imageDanone}
-            alt=""
-          />
-          <img
-            className="image-gif cell-start-8 cell-end-12"
-            src={imageElo}
-            alt=""
-          />
+        <div className="bloc-image image-1">
+          <div className="row">
+            <img
+              className="image-gif cell-start-6 cell-end-10"
+              src={imageNexity}
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="bloc-image image-2">
+          <div className="row">
+            <img
+              className="image-gif cell-start-0 cell-end-4"
+              src={imageBonduelle}
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="bloc-image image-3">
+          <div className="row">
+            <img
+              className="image-gif cell-start-3 cell-end-7"
+              src={imageDanone}
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="bloc-image image-4">
+          <div className="row">
+            <img
+              className="image-gif cell-start-8 cell-end-12"
+              src={imageElo}
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </main>
