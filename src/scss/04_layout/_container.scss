@@ -97,6 +97,10 @@
 ///////
 
 @media only screen and (max-width: 767px) {
+  .wrapper-main {
+    margin: 15% 0;
+  }
+
   h1 {
     display: flex;
     flex-direction: column;
