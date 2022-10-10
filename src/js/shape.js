@@ -9,7 +9,6 @@ import vertex from './shader/vertex.glsl';
 import GUI from 'lil-gui';
 import gsap from 'gsap'
 
-// code
 
 export default class Sketch {
   addObjects() {
