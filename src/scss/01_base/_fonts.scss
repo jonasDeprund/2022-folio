@@ -4,22 +4,38 @@
 ////
 ///////
 
+// @font-face {
+//   font-family: 'MarrSansRegular';
+//   src: url('../../fonts/MarrSansRegular.eot');
+//   src: url('../../fonts/MarrSansRegular.eot') format('embedded-opentype'),
+//     url('../../fonts/MarrSansRegular.woff2') format('woff2'),
+//     url('../../fonts/MarrSansRegular.woff') format('woff'),
+//     url('../../fonts/MarrSansRegular.ttf') format('truetype'),
+//     url('../../fonts/MarrSansRegular.svg#MarrSansRegular') format('svg');
+// }
+
+// @font-face {
+//   font-family: 'MarrSansMedium';
+//   src: url('../../fonts/MarrSansMedium.eot');
+//   src: url('../../fonts/MarrSansMedium.eot') format('embedded-opentype'),
+//     url('../../fonts/MarrSansMedium.woff2') format('woff2'),
+//     url('../../fonts/MarrSansMedium.woff') format('woff'),
+//     url('../../fonts/MarrSansMedium.ttf') format('truetype'),
+//     url('../../fonts/MarrSansMedium.svg#MarrSansMedium') format('svg');
+// }
+
 @font-face {
-  font-family: 'MarrSansRegular';
-  src: url('../../fonts/MarrSansRegular.eot');
-  src: url('../../fonts/MarrSansRegular.eot') format('embedded-opentype'),
-    url('../../fonts/MarrSansRegular.woff2') format('woff2'),
-    url('../../fonts/MarrSansRegular.woff') format('woff'),
-    url('../../fonts/MarrSansRegular.ttf') format('truetype'),
-    url('../../fonts/MarrSansRegular.svg#MarrSansRegular') format('svg');
+  font-family: 'marr_sans_webmedium';
+  src: url('../../fonts/marrsans-medium-webfont.woff2') format('woff2'),
+    url('../../fonts/marrsans-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'MarrSansMedium';
-  src: url('../../fonts/MarrSansMedium.eot');
-  src: url('../../fonts/MarrSansMedium.eot') format('embedded-opentype'),
-    url('../../fonts/MarrSansMedium.woff2') format('woff2'),
-    url('../../fonts/MarrSansMedium.woff') format('woff'),
-    url('../../fonts/MarrSansMedium.ttf') format('truetype'),
-    url('../../fonts/MarrSansMedium.svg#MarrSansMedium') format('svg');
+  font-family: 'marr_sans_webregular';
+  src: url('../../fonts/marrsans-regular-webfont.woff2') format('woff2'),
+    url('../../fonts/marrsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
