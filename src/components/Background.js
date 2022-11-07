@@ -1,8 +1,11 @@
 import React from 'react';
 import * as THREE from 'three';
+// Import layers
+import Fragment from './fragment.glsl';
+import Vertex from './fragment.glsl';
 
 // new code
-class Sketch {
+export class Sketch {
 addObjects() {
   extensions: {
   },
@@ -12,8 +15,8 @@ addObjects() {
     resolution: {value: new THREE.Vector4()},
   },
   wireframe: true,
-  vertexShader: vertex,
-  fragmentShader: fragment,
+  vertexShader: Vertex,
+  fragmentShader: Fragment,
 });
 
 this.geometry = new THREE.PlaneGeometry(1,1,300,300);
@@ -41,41 +44,20 @@ play(){
     this.isPlaying = true;
     this.render()
   }
+
+render(){
+  if(!this.isPlaying) return;
+  this.time += 0.05;
+  this.material.uniforms.time.value = this.time;
+  requestAnimationFrame(this.render.bind(this));
+  this.renderer.render(this.scene, this.camera);
+}
 }
 
+new Sketch({
+  dom: document.getElementsByClassName("shape")
+});
 
-// //
-// // init
-
-// const camera = new THREE.PerspectiveCamera(
-//   70,
-//   window.innerWidth / window.innerHeight,
-//   0.01,
-//   10
-// );
-// camera.position.z = 1;
-
-// const scene = new THREE.Scene();
-
-// const geometry = new THREE.PlaneGeometry(1, 1, 300, 1);
-// const material = new THREE.MeshNormalMaterial();
-
-// const plane = new THREE.Mesh(geometry, material);
-// scene.add(plane);
-
-// const renderer = new THREE.WebGLRenderer({ antialias: true });
-// renderer.setSize(window.innerWidth, window.innerHeight);
-// renderer.setAnimationLoop(animation);
-// document.body.appendChild(renderer.domElement);
-
-// animation();
-
-// function animation(time) {
-//   plane.rotation.x = time / 2000;
-//   plane.rotation.y = time / 1000;
-
-//   renderer.render(scene, camera);
-// }
 
 function Background() {
   return <div class="shape"></div>;

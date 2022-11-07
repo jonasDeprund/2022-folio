@@ -1,4 +1,4 @@
-import Background from './components/Background';
+import Background, { Sketch } from './components/Background';
 import Container from './components/Container';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -9,7 +9,7 @@ function App() {
     <div className="main">
       <Header />
       <Container />
-      {/* <Background /> */}
+      <Background />
       <Footer />
     </div>
   );
