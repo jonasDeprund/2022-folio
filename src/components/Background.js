@@ -2,12 +2,12 @@ import React from 'react';
 
 // Import three
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Import layers
-import Fragment from '../shader/fragment';
-import Vertex from '../vertex.glsl';
-// import GUI from ''lil-GUI';
+import Fragment from '../shader/fragment.glsl';
+import Vertex from '../shader/vertex.glsl';
+import GUI from 'lil-gui';
 import gsap from 'gsap';
 
 export class Sketch extends React.PureComponent {
