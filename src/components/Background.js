@@ -7,6 +7,8 @@ import { OrbitControls } from 'three/examples/jsm/controls';
 // Import layers
 import Fragment from '../shader/fragment';
 import Vertex from '../vertex.glsl';
+// import GUI from ''lil-GUI';
+import gsap from 'gsap';
 
 export class Sketch extends React.PureComponent {
   constructor(options) {
