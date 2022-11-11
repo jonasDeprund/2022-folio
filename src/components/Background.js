@@ -32,6 +32,26 @@ export class Sketch extends React.PureComponent {
       0.001,
       1000
     );
+
+    this.camera.position.set(0, 0, 1);
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.time = 0;
+
+    this.isPlaying = true;
+
+    this.addObjects();
+    this.resize();
+    this.render();
+    this.setupResize();
+  }
+
+  settings() {
+    let that = this;
+    this.settings = {
+      progress: 0,
+    };
+    this.gui = new gui();
+    this.gui.add(this.settings, 'progress', 0, 1, 0.01);
   }
 }
 
