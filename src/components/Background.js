@@ -7,7 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 // Import layers
 import Fragment from '../shader/fragment.glsl';
 import Vertex from '../shader/vertex.glsl';
-import GUI from 'lil-gui';
+// import GUI from 'lil-gui';
 import gsap from 'gsap';
 
 export class Sketch extends React.PureComponent {
@@ -53,6 +53,88 @@ export class Sketch extends React.PureComponent {
     this.gui = new gui();
     this.gui.add(this.settings, 'progress', 0, 1, 0.01);
   }
+
+  setupResize() {
+    window.addEventListener('resize', this.resize.bind(this));
+  }
+
+  resize() {
+    this.width = this.container.offsetWidth;
+    this.height = this.container.offsetHeight;
+    this.renderer.setSize(this.width, this.height);
+    this.camera.aspect = this.width / this.height;
+
+    this.imageAspect = 853 / 1280;
+    let a1;
+    let a2;
+    if (this.height / this.width > this.imageAspect) {
+      a1 = (this.width / this.heigth) * this.imageAspect;
+      a2 = 1;
+    } else {
+      a1 = 1;
+      a2 = (this.height / this.width) * this.imageAspect;
+    }
+
+    this.material.uniforms.resolution.value.x = this.width;
+    this.material.uniforms.resolution.value.y = this.height;
+    this.material.uniforms.resolution.value.z = a1;
+    this.material.uniforms.resolution.value.w = a2;
+
+    this.camera.updateProjectionMatrix();
+  }
+
+  addObjects() {
+    let that = this;
+    this.material = new THREE.ShaderMaterial({
+      extensions: {
+        derivatives: '#extension GL_OES_standard_derivatives : enable',
+      },
+      side: THREE.DoubleSide,
+      uniforms: {
+        time: { value: 0 },
+        resolution: { value: new THREE.Vector4() },
+      },
+      vertexShader: vertex,
+      fragmentShader: fragment,
+    });
+
+    this.geometry = new THREE.PlaneGeometry(1, 1, 1, 1);
+
+    this.plane = new THREE.Mesh(this.geometry, this.material);
+    this.scene.add(this.plane);
+  }
+
+  addLights(){
+      const light1 = new THREE.AmbientLight(0xffffff, 0.5);
+      this.scene.add(light1);
+    
+      const light2 = new THREE.DirectionalLight(0xffffff, 0.5);
+      light2.position.set(0.5, 0, 0.866);
+      this.scene.add(light2);
+    }
+
+    stop(){
+      this.isPlaying = false;
+    }
+    
+    play(){
+      if(!this.isPlaying){
+        this.isPlaying = true;
+        this.render()
+      }
+    }
+
+render(){
+  if(!this.isPlaying) return;
+  this.time += 0.05;
+  this.material.uniforms.time.value = this.time;
+  requestAnimationFrame(this.render.bind(this));
+  this.renderer.render(this.scene, this.camera);
+  }
+}
+
+new Sketch(){
+  dom: document.getElementsByClassName("shape")    
 }
 
 function Background() {
@@ -60,6 +142,8 @@ function Background() {
 }
 
 export default Background;
+
+////////////////////////////////////////////////////////////////
 
 // // viwport
 // var SCREEN_WIDTH = 1000;
