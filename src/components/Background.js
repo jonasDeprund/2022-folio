@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Import three
 import * as THREE from 'three';
@@ -10,9 +10,10 @@ import vertex from '../shader/vertex.glsl';
 // import gui from 'lil-gui';
 // import gsap from 'gsap';
 
-class Sketch extends Component {
+export default class Background extends React.Component {
   constructor(options) {
-    super(options);
+    super();
+
     this.scene = new THREE.Scene();
 
     this.container = options.dom;
@@ -134,12 +135,6 @@ class Sketch extends Component {
   }
 }
 
-new Sketch({
+new Background({
   dom: document.getElementsByClassName('shape'),
 });
-
-function Background() {
-  return <div class="shape"></div>;
-}
-
-export default Background;
