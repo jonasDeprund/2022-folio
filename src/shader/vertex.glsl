@@ -81,7 +81,7 @@ float snoise(vec3 v){
 }
 
 void main(){
-    vColor = vec3(0.5)
+    vColor = vec3(0.91f, 0f, 0f1f, 0f, 0f)
 
     float noise = snoise(vec3(uv, time *0.1));
 
@@ -90,5 +90,3 @@ void main(){
     vUv = uv;
     gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
 }
-
-export default Vertex;

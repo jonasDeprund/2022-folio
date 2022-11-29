@@ -21,20 +21,20 @@ camera.position.z = 1;
 const scene = new THREE.Scene();
 
 const material = new THREE.ShaderMaterial({
-  extensions: {
-    derivatives: '#extension GL_OES_standard_derivatives : enable',
-  },
-  side: THREE.DoubleSide,
+  vertexShader: vertex,
+  fragmentShader: fragment,
   uniforms: {
     time: { value: 0 },
     resolution: { value: new THREE.Vector4() },
   },
+  extensions: {
+    derivatives: '#extension GL_OES_standard_derivatives : enable',
+  },
+  side: THREE.DoubleSide,
   wireframe: true,
-  // vertexShader: vertex,
-  // fragmentShader: fragment,
 });
 
-const geometry = new THREE.PlaneGeometry(1, 1, 1);
+const geometry = new THREE.PlaneGeometry(1, 1, 300, 300);
 
 const plane = new THREE.Mesh(geometry, material);
 

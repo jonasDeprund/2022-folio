@@ -6,11 +6,13 @@ import imageDanone from '../images/danone.gif';
 import imageElo from '../images/elo.gif';
 
 function Container() {
+  // JS
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
   const [isShown3, setIsShown3] = useState(false);
   const [isShown4, setIsShown4] = useState(false);
 
+  // RETURN
   return (
     <main class="wrapper-main">
       {/* text */}
