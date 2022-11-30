@@ -5,20 +5,24 @@
 ///////
 
 .background--custom {
-  background: linear-gradient(90deg, #418af7, #0c0c0c);
-  background-size: 300% 300%;
-  animation: gradient 8s alternate infinite;
+  // background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
+  overflow: hidden;
+  z-index: -2;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
 }
-@keyframes gradient {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
+canvas#canvas {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(2) translateY(0%);
+  --gradient-color-1: #000000;
+  --gradient-color-2: #4897f7;
+  --gradient-color-3: #010676;
+  --gradient-color-4: #010676;
+  --gradient-speed: 0.000002;
 }
