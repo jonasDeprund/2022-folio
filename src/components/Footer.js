@@ -13,6 +13,7 @@ function Footer() {
             <div className="social-container">
               <p className="text-h2">Follow me</p>
               <a
+                rel="noreferrer"
                 className="icon"
                 href="https://dribbble.com/jonasdeprund"
                 target="_blank"
@@ -20,6 +21,7 @@ function Footer() {
                 <img src={iconDribbble} alt={iconDribbble} />
               </a>
               <a
+                rel="noreferrer"
                 className="icon"
                 href="https://www.behance.net/jonasdeprund"
                 target="_blank"
@@ -27,6 +29,7 @@ function Footer() {
                 <img src={iconBehance} alt={iconBehance} />
               </a>
               <a
+                rel="noreferrer"
                 className="icon"
                 href="https://github.com/jonasDeprund"
                 target="_blank"
@@ -34,6 +37,7 @@ function Footer() {
                 <img src={iconGithub} alt={iconGithub} />
               </a>
               <a
+                rel="noreferrer"
                 className="icon"
                 href="https://vimeo.com/user22875160"
                 target="_blank"

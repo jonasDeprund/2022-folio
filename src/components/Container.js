@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+
+// Import image
 import imageNexity from '../images/nexity.gif';
 import imageBonduelle from '../images/bonduelle.gif';
 import imageDanone from '../images/danone.gif';
@@ -22,6 +24,7 @@ function Container() {
             Hello. I am an interactive designer based in Paris.
             <br />I worked for
             <a
+              rel="noreferrer"
               href="https://www.behance.net/gallery/122497029/Nexity-Corporate-website-%28Pitch%29"
               target="_blank"
             >
@@ -34,6 +37,7 @@ function Container() {
               </span>
             </a>
             <a
+              rel="noreferrer"
               href="https://www.behance.net/gallery/132516291/Bonduelle-Corporate-Website"
               target="_blank"
             >
@@ -46,6 +50,7 @@ function Container() {
               </span>
             </a>
             <a
+              rel="noreferrer"
               href="https://www.behance.net/gallery/124320911/Danone-Annual-report-2020"
               target="_blank"
             >
@@ -58,6 +63,7 @@ function Container() {
               </span>
             </a>
             <a
+              rel="noreferrer"
               href="https://www.behance.net/gallery/131689655/Elo-Group-Corporate-Website"
               target="_blank"
             >
@@ -69,7 +75,11 @@ function Container() {
                 Elo Group
               </span>
             </a>
-            <a href="https://www.behance.net/jonasdeprund" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https://www.behance.net/jonasdeprund"
+              target="_blank"
+            >
               <span class="text-h1 text-h1-m button">+</span>
             </a>
             <br />
