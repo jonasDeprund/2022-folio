@@ -65,14 +65,14 @@ function Background() {
     gl.enableVertexAttribArray(positionLocation);
     gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
 
-    // !(function renderLoop() {
-    //   gl.uniform1f(gl.getUniformLocation(program, 'time' / 2), t);
-    //   gl.uniform2f(gl.getUniformLocation(program, 'resolution'), w, h);
+    (function renderLoop() {
+      gl.uniform1f(gl.getUniformLocation(program, 'time' / 2), t);
+      gl.uniform2f(gl.getUniformLocation(program, 'resolution'), w, h);
 
-    //   gl.drawArrays(gl.TRIANGLES, 0, 6);
-    //   t += 0.016666666668;
-    //   requestAnimationFrame(renderLoop);
-    // })();
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+      t += 0.016666666668;
+      requestAnimationFrame(renderLoop);
+    })();
   })(
     document
       .createElement('canvas')
