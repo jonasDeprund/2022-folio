@@ -1,16 +1,22 @@
 import React from 'react';
+// Import image
 
 function Header() {
+  // JS
+
+  // RETURN
   return (
-    <nav class="navigation">
-      <ul class="row">
-        <li class="cell-start-0 cell-end-12">
-          <a class="text-h2 text-h2-m" href="index.html">
-            Jonas Deprund
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <main class="wrapper-main">
+      {/* text */}
+      <div className="container-title">
+        <div class="row">
+          <h1 class="text-h1 text-h1-m cell-start-0 cell-end-12 cell-start-0-m cell-end-12-m">
+            Hello. I am an interactive designer based in Paris.
+            <br></br>I craft identities and websites
+          </h1>
+        </div>
+      </div>
+    </main>
   );
 }
 

@@ -1,20 +1,18 @@
 import React from 'react';
-
-// Import
-import Container from './components/Container';
-import Background from './components/Background';
-
-// import Shape from './components/Shape';
-import Footer from './components/Footer';
+// Component
 import Header from './components/Header';
-import './scss/_main.scss'; // assuming a styles directory under src/
+import Background from './components/Background';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
+// Styles
+import './scss/_main.scss';
 
 function App() {
   return (
     <div className="main">
+      <Nav />
       <Header />
       <Background />
-      <Container />
       <Footer />
     </div>
   );
