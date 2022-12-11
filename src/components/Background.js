@@ -19,6 +19,7 @@ function Background() {
       ]),
       gl.STATIC_DRAW
     );
+
     gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
     const program = gl.createProgram();
     const vshader = gl.createShader(gl.VERTEX_SHADER);
@@ -26,34 +27,33 @@ function Background() {
     gl.shaderSource(
       vshader,
       `
-	precision lowp float;
-	attribute vec2 a_position;
-	void main() {
-		gl_Position = vec4(a_position, 0, 1);
+    precision lowp float;
+    attribute vec2 a_position;
+    void main() {
+    gl_Position = vec4(a_position, 0, 1);
 	}
 `
     );
     gl.shaderSource(
       fshader,
       `
-  //Original code 129 bytes https://www.dwitter.net/d/21373 - by Pascal
 
-  precision mediump float;
-  uniform float time;
-  uniform vec2 resolution;
-
-  #define S sin
-  #define C cos
-  #define t time/10.
-  #define X uv.x*32.
-  #define Y -uv.y*32.
-
-  void main( void ) {
-    vec2 uv = ( gl_FragCoord.xy-.5* resolution.xy )/resolution.y-.5 ;
-	  float c = S(X/10.+Y/15.)*S(X/20.+t+S(2.*t+Y/5.));
-	  gl_FragColor = vec4( vec3( 0, c, .5+c), 1.0 );
-  }
-`
+    precision mediump float;
+    uniform float time;
+    uniform vec2 resolution;
+  
+    #define S sin
+    #define C cos
+    #define t time/2.
+    #define X uv.x*32.
+    #define Y -uv.y*32.
+  
+    void main( void ) {
+      vec2 uv = ( gl_FragCoord.xy-.5* resolution.xy )/resolution.y-.5 ;
+      float c = S(X/10.+Y/15.)*S(X/20.+t+S(2.*t+Y/5.));
+      gl_FragColor = vec4( vec3( 0, c, .5+c), 1.0 );
+    }
+  `
     );
     gl.compileShader(vshader);
     gl.compileShader(fshader);
@@ -66,11 +66,11 @@ function Background() {
     gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
 
     (function renderLoop() {
-      gl.uniform1f(gl.getUniformLocation(program, 'time' / 2), t);
+      gl.uniform1f(gl.getUniformLocation(program, 'time'), t);
       gl.uniform2f(gl.getUniformLocation(program, 'resolution'), w, h);
 
       gl.drawArrays(gl.TRIANGLES, 0, 6);
-      t += 0.016666666668;
+      t += 0.003;
       requestAnimationFrame(renderLoop);
     })();
   })(
