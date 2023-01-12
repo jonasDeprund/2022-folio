@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Background from './components/Background';
 import Footer from './components/Footer';
 import Nav from './components/Nav';
+import Thumbnail from './components/Thumbnail';
 // Styles
 import './scss/_main.scss';
 
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <Header />
       <Background />
+      <Thumbnail />
       <Footer />
     </div>
   );
