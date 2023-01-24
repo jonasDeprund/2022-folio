@@ -1,4 +1,5 @@
 import React from 'react';
+import Background from '../components/Background';
 // Import image
 
 function Header() {
@@ -6,7 +7,7 @@ function Header() {
 
   // RETURN
   return (
-    <main class="wrapper-main">
+    <div class="wrapper-header">
       {/* text */}
       <div className="container-title">
         <div class="row">
@@ -17,7 +18,8 @@ function Header() {
           </h1>
         </div>
       </div>
-    </main>
+      <Background />
+    </div>
   );
 }
 

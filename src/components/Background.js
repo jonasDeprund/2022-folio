@@ -7,7 +7,8 @@ function Background() {
     document.body.appendChild(c);
     c.width = w;
     c.height = h;
-    c.style = 'position:fixed;width:100vw;height:100vh;top:0;left:0;z-index:-1';
+    c.style =
+      'position:fixed;width:100vw;height:100vh;top:0;left:0;z-index:-1;overflow:hidden;';
 
     let t = 0;
     const buffer = gl.createBuffer();
