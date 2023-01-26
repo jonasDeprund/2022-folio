@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectSmallPreview = (props) => {
+const ProjectSmallPreview = (projects) => {
   return (
     <div>
       <img
