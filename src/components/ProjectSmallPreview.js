@@ -1,21 +1,19 @@
 import React from 'react';
 
-const ProjectSmallPreview = (projects) => {
+const ProjectSmallPreview = (project) => {
   return (
     <div>
       <img
-        src={props.image}
-        alt={props.title}
+        src={project.image}
+        alt={project.title}
         style={{ width: '100%', height: 'auto', aspectRatio: 3 / 2 }}
       />
-      <h3>{props.title}</h3>
+      <h3>{project.title}</h3>
       <img
-        src={props.icon}
+        src={project.icon}
         alt="arrow icon"
         style={{ width: '20px', height: 'auto' }}
       />
     </div>
   );
 };
-
-export default ProjectSmallPreview;
