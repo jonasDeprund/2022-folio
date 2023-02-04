@@ -6,10 +6,10 @@ import iconVimeo from '../svg/vimeo.svg';
 
 function Footer() {
   return (
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="row">
-          <div class="cell-6 cell-12-tp">
+    <footer className="footer">
+      <div className="footer__inner">
+        <div className="row">
+          <div className="cell-6 cell-12-tp">
             <div className="social-container">
               <p className="text-h2">Follow me</p>
               <a
