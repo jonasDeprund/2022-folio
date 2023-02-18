@@ -11,38 +11,42 @@ const Projects = () => {
   return (
     <div className="row">
       <div className="cell-start-0 cell-end-6">
-        <img src={imageNexity} alt="Nexity" />
-        <div className="">
+        <div className="project__content">
+          <img className="project__image" src={imageNexity} alt="Nexity" />
           <h3 className="text-h2">Nexity</h3>
         </div>
       </div>
       <div className="cell-start-6 cell-end-12">
-        <img src={imageBonduelle} alt="Bonduelle" />
-        <div className="">
+        <div className="project__content">
+          <img
+            className="project__image"
+            src={imageBonduelle}
+            alt="Bonduelle"
+          />
           <h3 className="text-h2">Bonduelle</h3>
         </div>
       </div>
       <div className="cell-start-0 cell-end-6">
-        <img src={imageDanone} alt="Danone" />
-        <div className="">
+        <div className="project__content">
+          <img className="project__image" src={imageDanone} alt="Danone" />
           <h3 className="text-h2">Danone</h3>
         </div>
       </div>
       <div className="cell-start-6 cell-end-12">
-        <img src={imageEloGroup} alt="Elo Group" />
-        <div className="">
+        <div className="project__content">
+          <img className="project__image" src={imageEloGroup} alt="Elo Group" />
           <h3 className="text-h2">Elo Group</h3>
         </div>
       </div>
       <div className="cell-start-0 cell-end-6">
-        <img src={imageAhp} alt="AHP" />
-        <div className="">
+        <div className="project__content">
+          <img className="project__image" src={imageAhp} alt="AHP" />
           <h3 className="text-h2">AHP</h3>
         </div>
       </div>
       <div className="cell-start-6 cell-end-12">
-        <img src={imageSoBrico} alt="So Brico" />
-        <div className="">
+        <div className="project__content">
+          <img className="project__image" src={imageSoBrico} alt="So Brico" />
           <h3 className="text-h2">So Brico</h3>
         </div>
       </div>
