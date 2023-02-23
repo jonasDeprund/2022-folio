@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 function Background() {
-  // JS
-  (function (gl, w, h) {
-    const c = gl.canvas;
-    document.body.appendChild(c);
-    c.width = w;
-    c.height = h;
-    c.style =
-      'position:fixed;width:100vw;height:100vh;top:0;left:0;z-index:-1;overflow:hidden;';
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const gl = canvas.getContext('webgl', { preserveDrawingBuffer: true });
+
+    const navElement = document.getElementsByTagName('nav')[0];
+
+    navElement.appendChild(canvas);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style = '';
 
     let t = 0;
     const buffer = gl.createBuffer();
@@ -32,7 +36,7 @@ function Background() {
     attribute vec2 a_position;
     void main() {
     gl_Position = vec4(a_position, 0, 1);
-	}
+    }
 `
     );
     gl.shaderSource(
@@ -66,26 +70,24 @@ function Background() {
     gl.enableVertexAttribArray(positionLocation);
     gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
 
-    (function renderLoop() {
+    function renderLoop() {
       gl.uniform1f(gl.getUniformLocation(program, 'time'), t);
-      gl.uniform2f(gl.getUniformLocation(program, 'resolution'), w, h);
+      gl.uniform2f(
+        gl.getUniformLocation(program, 'resolution'),
+        window.innerWidth,
+        window.innerHeight
+      );
 
       gl.drawArrays(gl.TRIANGLES, 0, 6);
       t += 0.003;
       requestAnimationFrame(renderLoop);
-    })();
-  })(
-    document
-      .createElement('canvas')
-      .getContext('webgl', { preserveDrawingBuffer: true }),
-    window.innerWidth,
-    window.innerHeight
-  );
+    }
+    renderLoop();
+  }, []);
 
-  //RETURN
   return (
     <div>
-      <></>
+      <canvas ref={canvasRef}></canvas>
     </div>
   );
 }
