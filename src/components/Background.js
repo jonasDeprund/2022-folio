@@ -87,7 +87,7 @@ function Background() {
 
   return (
     <div>
-      <canvas ref={canvasRef}></canvas>
+      <canvas className="shape" ref={canvasRef}></canvas>
     </div>
   );
 }
