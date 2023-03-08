@@ -12,7 +12,8 @@
 
 .row {
   display: grid;
-  width: 144rem;
+  max-width: 144rem;
+  margin: auto;
   min-width: 0;
   width: 100%;
   padding-left: var(--grid-spacer);
