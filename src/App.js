@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
-import Services from './components/Services';
+import About from './components/About';
 
 // Styles
 import './scss/_main.scss';
@@ -21,7 +21,7 @@ function App() {
         <Header />
         <Background />
         <Projects />
-        <Services />
+        <About />
       </main>
       <footer>
         <Footer />
