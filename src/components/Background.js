@@ -1,7 +1,22 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 function Background() {
   const canvasRef = useRef(null);
+  const [scrollOpacity, setScrollOpacity] = useState(1);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollPosition = window.pageYOffset;
+      const newOpacity = 1 - scrollPosition / window.innerHeight;
+      setScrollOpacity(newOpacity);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -42,7 +57,6 @@ function Background() {
     gl.shaderSource(
       fshader,
       `
-
     precision mediump float;
     uniform float time;
     uniform vec2 resolution;
@@ -86,9 +100,14 @@ function Background() {
   }, []);
 
   return (
-    <div>
-      <canvas className="shape" ref={canvasRef}></canvas>
-    </div>
+    <>
+      <div style={{ opacity: scrollOpacity }}>
+        {/* Contenu de votre composant Background */}
+      </div>
+      <div>
+        <canvas className="shape" ref={canvasRef}></canvas>
+      </div>
+    </>
   );
 }
 
