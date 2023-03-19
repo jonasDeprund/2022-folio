@@ -21,7 +21,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
-  grid-column-gap: var(--grid-gutter);
+  grid-column-gap: 3.2rem;
 }
 
 .cell-start-0 {

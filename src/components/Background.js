@@ -7,7 +7,7 @@ function Background() {
   useEffect(() => {
     function handleScroll() {
       const scrollPosition = window.pageYOffset;
-      const newOpacity = 1 - scrollPosition / window.innerHeight;
+      const newOpacity = 1 - (scrollPosition * 1.5) / window.innerHeight;
       setScrollOpacity(newOpacity);
     }
 
@@ -27,7 +27,8 @@ function Background() {
     navElement.appendChild(canvas);
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    canvas.style = '';
+    canvas.style =
+      'position:fixed;width:100vw;height:100vh;top:0;left:0;z-index:-1';
 
     let t = 0;
     const buffer = gl.createBuffer();
@@ -101,12 +102,11 @@ function Background() {
 
   return (
     <>
-      <div style={{ opacity: scrollOpacity }}>
-        {/* Contenu de votre composant Background */}
-      </div>
-      <div>
-        <canvas className="shape" ref={canvasRef}></canvas>
-      </div>
+      <canvas
+        className="shape"
+        style={{ opacity: scrollOpacity }}
+        ref={canvasRef}
+      ></canvas>
     </>
   );
 }
