@@ -21,7 +21,7 @@ function App() {
         <Header />
         <Background />
         <Projects />
-        <About />
+        {/* <About /> */}
       </main>
       <footer>
         <Footer />
