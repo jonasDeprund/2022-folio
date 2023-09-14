@@ -17,8 +17,14 @@ body {
 ///////
 
 .navigation {
-  width: 1280px;
   width: 100%;
+  height: 88px;
+}
+
+.navigation__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -33,10 +39,6 @@ body {
   margin-bottom: 3.2rem;
 }
 
-.navigation {
-  margin-top: 4.8rem;
-}
-
 .credit {
   text-align: right;
 }
@@ -44,6 +46,17 @@ body {
 .front {
   z-index: 99;
 }
+
+.contact {
+  justify-content: right;
+  // align-items: end;
+}
+
+////////
+////
+//// Background
+////
+///////
 
 .background--custom {
   width: 100vw;

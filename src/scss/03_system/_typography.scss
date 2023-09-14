@@ -31,6 +31,15 @@
   color: var(--color-secondary);
 }
 
+.text-button {
+  font-family: 'marr_sans_webregular';
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 4rem;
+  letter-spacing: 0.05px;
+  color: var(--color-secondary);
+}
+
 @media only screen and (max-width: 767px) {
   .text-h1-m {
     font-size: 2.4rem;

@@ -39,7 +39,7 @@ const Projects = () => {
             </a>
           </div>
 
-          {/* Projet 1 */}
+          {/* Projet 2 */}
           <div className="cell-start-0 cell-end-6 cell-start-0-m cell-end-12-m">
             <a href="#" target="_blank" rel="noopener noreferrer">
               <div className="project__content">
@@ -47,7 +47,7 @@ const Projects = () => {
                   <img
                     className="project__image"
                     src={imageSlate}
-                    alt="Nexity"
+                    alt="Slate"
                   />
                 </div>
                 <div className="project__description">
@@ -65,12 +65,12 @@ const Projects = () => {
                 <div className="project__content-image">
                   <img
                     className="project__image"
-                    src={imageSlate}
-                    alt="Nexity"
+                    src={imageBanque}
+                    alt="Banque de France"
                   />
                 </div>
                 <div className="project__description">
-                  <h3 className="text-h2">Slate</h3>
+                  <h3 className="text-h2">Banque de France</h3>
                   <img className="project__icon" src={iconArrow}></img>
                 </div>
               </div>
