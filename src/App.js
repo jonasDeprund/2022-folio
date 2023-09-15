@@ -5,7 +5,7 @@ import Background from './components/Background';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Projects from './components/Projects';
+import Projects from './components/ProjectsContainer';
 import About from './components/About';
 
 // Styles
