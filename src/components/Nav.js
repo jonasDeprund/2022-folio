@@ -1,5 +1,7 @@
 import React from 'react';
 
+import iconArrowRight from '../svg/arrow-right.svg';
+
 function Nav() {
   return (
     <nav className="navigation">
@@ -11,8 +13,12 @@ function Nav() {
             </a>
           </li>
           <li className="">
-            <a className="contact button text-h2" href="index.html">
-              contact
+            <a
+              className="contact button text-h2"
+              href="mailto:jonasdeprund@gmail.com"
+            >
+              <span>Contact</span>
+              <img className="button__icon" src={iconArrowRight} alt="Arrow" />
             </a>
           </li>
         </div>

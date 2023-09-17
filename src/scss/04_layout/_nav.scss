@@ -19,12 +19,14 @@ body {
 .navigation {
   width: 100%;
   height: 88px;
+  display: flex;
 }
 
 .navigation__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .title {
@@ -49,7 +51,6 @@ body {
 
 .contact {
   justify-content: right;
-  // align-items: end;
 }
 
 ////////
