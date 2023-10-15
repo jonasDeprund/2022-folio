@@ -14,7 +14,7 @@ function Nav() {
           </li>
           <li className="">
             <a
-              className="contact button text-h2"
+              className="contact button text-button"
               href="mailto:jonasdeprund@gmail.com"
             >
               <span>Contact</span>
