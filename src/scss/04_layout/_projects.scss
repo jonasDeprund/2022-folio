@@ -73,3 +73,12 @@ canvas {
   // transform: translateY(-50%);
   opacity: 1;
 }
+
+// Mobile
+
+@media screen and (max-width: 768px) {
+  .project__image {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+}
