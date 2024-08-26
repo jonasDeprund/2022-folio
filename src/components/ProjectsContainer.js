@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 // Import d'images
+import imageActu from '../images/thumb-actu.png';
+import imageActuHovered from '../images/thumb-actu-hovered.png';
 import imageNexity from '../images/thumb-nexity.png';
 import imageNexityHovered from '../images/thumb-nexity-hovered.png';
 import imageBonduelle from '../images/thumb-bonduelle.png';
@@ -29,7 +31,16 @@ const ProjectsContainer = () => {
   const projectData = [
     {
       id: 0,
-      title: 'Slate',
+      title: 'Actu.fr - Olympics games',
+      link: 'https://www.behance.net/gallery/192332371/Slatefr-Media-website',
+      image: {
+        default: imageActu,
+        hovered: imageActuHovered,
+      },
+    },
+    {
+      id: 1,
+      title: 'Slate - Media',
       link: 'https://www.behance.net/gallery/192332371/Slatefr-Media-website',
       image: {
         default: imageSlate,
@@ -37,8 +48,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 1,
-      title: 'Banque de France',
+      id: 2,
+      title: 'Banque de France - Corporate',
       link: 'https://www.behance.net/gallery/150653589/Banque-de-France-Corporate-website',
       image: {
         default: imageBanque,
@@ -46,8 +57,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 2,
-      title: 'Taste France Magazine',
+      id: 3,
+      title: 'Taste France Magazine  - Media',
       link: 'https://www.behance.net/gallery/170954261/Taste-France-Magazine',
       image: {
         default: imageTasteFrance,
@@ -55,8 +66,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 3,
-      title: 'Nexity',
+      id: 4,
+      title: 'Nexity - Corporate',
       link: 'https://www.behance.net/gallery/122497029/Nexity-Corporate-website-(Pitch)',
       image: {
         default: imageNexity,
@@ -64,8 +75,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 4,
-      title: 'Bonduelle',
+      id: 5,
+      title: 'Bonduelle - Corporate',
       link: 'https://www.behance.net/gallery/132516291/Bonduelle-Corporate-Website',
       image: {
         default: imageBonduelle,
@@ -73,8 +84,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 5,
-      title: 'Danone',
+      id: 6,
+      title: 'Danone - Corporate',
       link: 'https://www.behance.net/gallery/124320911/Danone-Annual-report-2020',
       image: {
         default: imageDanone,
@@ -82,8 +93,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 6,
-      title: 'Elo Group',
+      id: 7,
+      title: 'Elo Group - Corporate',
       link: 'https://www.behance.net/gallery/131689655/Elo-Group-Corporate-Website',
       image: {
         default: imageElo,
@@ -91,8 +102,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 7,
-      title: 'AHP Campaign',
+      id: 8,
+      title: 'Ahp - Event',
       link: 'https://www.behance.net/gallery/98421997/American-Hospital-of-Paris-Event-website',
       image: {
         default: imageAhp,
@@ -100,8 +111,8 @@ const ProjectsContainer = () => {
       },
     },
     {
-      id: 8,
-      title: 'So Brico',
+      id: 9,
+      title: 'So Brico - E-commerce',
       link: 'https://www.behance.net/gallery/122495107/Sobrico-E-commerce',
       image: {
         default: imageSobrico,
@@ -184,6 +195,14 @@ const ProjectsContainer = () => {
               title={projectData[8].title}
               link={projectData[8].link}
               image={projectData[8].image}
+            />
+          </div>
+          <div className="cell-start-0 cell-end-6 cell-start-0-m cell-end-12-m">
+            <ProjectSmall
+              key={projectData[9].id}
+              title={projectData[9].title}
+              link={projectData[9].link}
+              image={projectData[9].image}
             />
           </div>
         </div>
